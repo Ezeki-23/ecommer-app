@@ -9,7 +9,7 @@ function Cart () {
     const [preferenceId, setPreferenceId] = useState(null);
     const carts = JSON.parse(localStorage.getItem('cart')) || []
 
-    initMercadoPago('TEST-0ebc4f7b-799c-4bac-883c-5896888ac9d2');
+    initMercadoPago('TEST-bfce1e36-2cd3-475f-9352-44483e8296a3');
 
     useEffect(() => {
         const total = carts.reduce((acc, item) => {
@@ -58,7 +58,7 @@ function Cart () {
 
     const createPreference = async () => {
       try {
-        const response = await axios.post("http://localhost:3000/create_preference", {
+        const response = await axios.post("https://mercapp-back.onrender.com/create_preference", {
           description: "gracias por la compra",
           price: total,
           quantity: 1
