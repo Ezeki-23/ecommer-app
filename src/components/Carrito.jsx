@@ -61,7 +61,8 @@ function Cart () {
         const response = await axios.post("https://mercapp-back.onrender.com/create_preference", {
           description: "gracias por la compra",
           price: total,
-          quantity: 1
+          quantity: 1, 
+          currency_id: "ARS",
         });
         const { id } = response.data;
         return id;
