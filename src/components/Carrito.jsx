@@ -9,7 +9,7 @@ function Cart () {
     const [preferenceId, setPreferenceId] = useState(null);
     const carts = JSON.parse(localStorage.getItem('cart')) || []
 
-    initMercadoPago('TEST-bfce1e36-2cd3-475f-9352-44483e8296a3');
+    initMercadoPago('APP_USR-7a833b45-6081-480b-9f39-8bd71af54b40');
 
     useEffect(() => {
         const total = carts.reduce((acc, item) => {
